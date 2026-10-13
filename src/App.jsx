@@ -307,6 +307,11 @@ function Layout() {
   return <><Header /><main key={location.pathname}>{/* routes render below */}<Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/programs" element={<Programs />} /><Route path="/trainers" element={<Trainers />} /><Route path="/membership" element={<Membership />} /><Route path="/gallery" element={<Gallery />} /><Route path="/contact" element={<Contact />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /></>;
 }
 
+
 export default function App() {
-  return <BrowserRouter><Layout /></BrowserRouter>;
+  return (
+    <BrowserRouter basename="/A-gym">
+      <Layout />
+    </BrowserRouter>
+  );
 }
